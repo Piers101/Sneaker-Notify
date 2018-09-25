@@ -535,7 +535,7 @@ class MYSQL_Pipeline(object):
           print(Fore.RED + 'TWEET LOG SUCCESS: ' + DATE + ' EST ' + item['name'] + ' ' + item['link'] + Style.RESET_ALL if TWEET.status_code == 200 else Fore.RED + 'TWEET LOG FAILURE: FAILED TO TWEET' + Style.RESET_ALL)
 		  
 		  # WebHook for Discord. Comment/Uncomment the line below to enable/disable.
-          # requests.post('DISCORD WEBHOOK URL', data={'content': "**" + item['name'] + "**" + "\n" + item['link'] + "\n" + "\n" + "[ATC]: " + item['size'] + "\n" + "------------" + "\n"})
+          # requests.post('https://discordapp.com/api/webhooks/494032697035849739/F9JVjPsMNcDLHG3n1Jytjf9rCA4zADu_CR8U3zM5nxpdhqGMoVFF4N4wFFVIDNXDkA_f', data={'content': "**" + item['name'] + "**" + "\n" + item['link'] + "\n" + "\n" + "[ATC]: " + item['size'] + "\n" + "------------" + "\n"})
 		  
 		  # WebHook for Slack. Comment/Uncomment the line below to enable/disable.
           # requests.post('SLACK WEBHOOK URL', json={'text': "*" + item['name'] + "*" + "\n" + item['link'] + "\n" + "\n" + "[ATC]: " + item['size'] + "\n" + "------------" + "\n"}, headers={'Content-Type': 'application/json'})
